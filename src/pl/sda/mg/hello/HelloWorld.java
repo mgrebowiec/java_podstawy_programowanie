@@ -74,6 +74,19 @@ public class HelloWorld {
 
         hw.sample();
 
+        rekurencja(10);
+
+
+    }
+
+
+
+    private static void rekurencja(int x) {
+        if (x == 0) {
+            System.out.println("cos");
+        } else {
+            rekurencja(x - 1);
+        }
 
     }
 }
