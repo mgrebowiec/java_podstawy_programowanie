@@ -1,5 +1,7 @@
 package pl.sda.mg.util;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class InUtil {
@@ -14,5 +16,11 @@ public class InUtil {
         System.out.println("Podaj liczbe: ");
         Scanner in = new Scanner(System.in);
         return in.nextInt();
+    }
+
+    public static LocalDate getDateFromUser() {
+        System.out.println("Podaj date: ");
+        Scanner in = new Scanner(System.in);
+        return LocalDate.parse(in.nextLine(), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 }
